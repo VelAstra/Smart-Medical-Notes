@@ -47,9 +47,7 @@ Proyek ini merealisasikan visi penelitian disertasi Dr. Lukman untuk memfasilita
 
 ```
 Smart Medical Notes/
-├── Dokumentasi.jpeg       # Foto slide acuan UI penelitian disertasi
-├── Konsul.txt             # Rangkuman konsep, arsitektur, dan target MVP
-├── Notul.txt              # Catatan bimbingan awal
+├── CONTRIBUTORS.md        # Susunan anggota tim & kontributor proyek
 ├── README.md              # Dokumentasi teknis & panduan uji
 └── prototype/
     ├── index.html         # Antarmuka web responsif 2-kolom
