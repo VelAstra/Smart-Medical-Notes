@@ -1,0 +1,44 @@
+/* Gaya Khusus Prototipe Smart Medical Notes */
+
+/* Animasi & Highlight saat Saran Diterima */
+@keyframes highlightAccepted {
+  0% {
+    background-color: rgba(20, 184, 166, 0.25);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.highlight-accept {
+  animation: highlightAccepted 1.2s ease-out;
+}
+
+/* Scrollbar rapi untuk wadah saran */
+#suggestionsContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+#suggestionsContainer::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+#suggestionsContainer::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+#suggestionsContainer::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Transisi Halus Kartu Rekomendasi */
+.suggestion-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.suggestion-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
