@@ -6,6 +6,25 @@ Proyek ini merealisasikan visi penelitian disertasi Dr. Lukman untuk memfasilita
 
 ---
 
+## Informasi Kelompok & Pengembang
+
+* **Mata Kuliah**: Kapita Selekta Rekayasa Perangkat Lunak dan Data (KS RPLD)
+* **Kelas**: KOM B
+* **Nama Proyek**: Smart Medical Notes
+* **Nama Kelompok**: Partai Pengguling Rezim
+
+### Anggota Tim
+
+| No. | NIM | Nama Mahasiswa |
+| :---: | :--- | :--- |
+| 1 | `24/545406/PA/23176` | Rayhan Haldi Hermawan |
+| 2 | `24/533677/PA/22604` | Pratama Aji |
+| 3 | `24/545184/PA/23161` | Ifham Syafwan Fikri |
+| 4 | `24/533691/PA/22608` | Ananda Auliya Rahma |
+| 5 | `24/535256/PA/22707` | Alifa Batrisyia Nariswari |
+
+---
+
 ## 1. Fitur Utama Prototipe
 
 1. **SOAP Note Editor (2-Panel Layout)**:
