@@ -1,0 +1,134 @@
+[
+  {
+    "singkatan": "df",
+    "istilah_resmi": "Dengue Fever",
+    "kode_icd10": "A90",
+    "alasan_rekomendasi": "Singkatan 'df' ambigu karena dapat tertukar dengan Drug Flare atau Dengue Flare. Koder memerlukan kepastian apakah Dengue Fever biasa (A90) atau DHF (A91)."
+  },
+  {
+    "singkatan": "dhf",
+    "istilah_resmi": "Dengue Haemorrhagic Fever (Demam Berdarah Dengue)",
+    "kode_icd10": "A91",
+    "alasan_rekomendasi": "Wajib dibedakan dari Dengue Fever (A90) karena perbedaan kelompok tarif klaim INA-CBG dan persyaratan hasil lab trombositopenia."
+  },
+  {
+    "singkatan": "dss",
+    "istilah_resmi": "Dengue Shock Syndrome",
+    "kode_icd10": "A91.0",
+    "alasan_rekomendasi": "Kategori kegawatan syok dengue. Verifikator BPJS mewajibkan bukti tekanan nadi sempit (< 20 mmHg) atau hipotensi pada rekam medis."
+  },
+  {
+    "singkatan": "gea",
+    "istilah_resmi": "Gastroenteritis Akut",
+    "kode_icd10": "A09",
+    "alasan_rekomendasi": "Singkatan 'gea' tidak boleh berdiri sendiri tanpa mencantumkan derajat dehidrasi (tanpa dehidrasi, dehidrasi ringan-sedang, dehidrasi berat)."
+  },
+  {
+    "singkatan": "ispa",
+    "istilah_resmi": "Infeksi Saluran Pernapasan Akut",
+    "kode_icd10": "J06.9",
+    "alasan_rekomendasi": "Diagnosis 'ispa' terlalu umum (unspecified). Koder menyarankan spesifikasi anatomis seperti Faringitis Akut (J02.9) atau Nasofaringitis (J00)."
+  },
+  {
+    "singkatan": "ht",
+    "istilah_resmi": "Hipertensi Esensial (Primer)",
+    "kode_icd10": "I10",
+    "alasan_rekomendasi": "Singkatan 'ht' sering tertukar dengan parameter laboratorium Hematokrit (Ht) atau Histerektomi dalam catatan medis."
+  },
+  {
+    "singkatan": "dm",
+    "istilah_resmi": "Diabetes Mellitus Tipe 2",
+    "kode_icd10": "E11.9",
+    "alasan_rekomendasi": "Wajib menyebutkan tipe (DM Tipe 1 atau Tipe 2) serta status komplikasi (dengan/tanpa komplikasi nefropati, neuropati, atau retinopati)."
+  },
+  {
+    "singkatan": "tbc",
+    "istilah_resmi": "Tuberkulosis Paru",
+    "kode_icd10": "A15.0",
+    "alasan_rekomendasi": "Istilah resmi rekam medis adalah Tuberkulosis (TB). Hindari singkatan 'tbc' dan lampirkan konfirmasi bakteriologis TCM/BTA."
+  },
+  {
+    "singkatan": "cva",
+    "istilah_resmi": "Cerebrovascular Accident (Stroke)",
+    "kode_icd10": "I64",
+    "alasan_rekomendasi": "Koder memerlukan diferensiasi tegas antara CVA Infark (I63) atau CVA Perdarahan/Bleeding (I61) karena perbedaan paket tarif klaim rumah sakit."
+  },
+  {
+    "singkatan": "oa",
+    "istilah_resmi": "Osteoartritis",
+    "kode_icd10": "M19.9",
+    "alasan_rekomendasi": "Wajib mencantumkan lokasi sendi yang terdampak secara spesifik (misal: Osteoartritis Genu Bilateral atau Coxae)."
+  },
+  {
+    "singkatan": "app",
+    "istilah_resmi": "Apendisitis Akut",
+    "kode_icd10": "K35.8",
+    "alasan_rekomendasi": "Singkatan 'app' berisiko ambigu dengan Appendectomy (tindakan bedah) atau Application. Cantumkan nama penyakit Apendisitis Akut."
+  },
+  {
+    "singkatan": "chf",
+    "istilah_resmi": "Congestive Heart Failure (Gagal Jantung Kongestif)",
+    "kode_icd10": "I50.0",
+    "alasan_rekomendasi": "Verifikator asuransi mewajibkan pencantuman derajat fungsional NYHA (Kelas I - IV) dan bukti pemeriksaan penunjang (EKG/Rontgen/Ekokardiografi)."
+  },
+  {
+    "singkatan": "pjk",
+    "istilah_resmi": "Penyakit Jantung Koroner (Ischaemic Heart Disease)",
+    "kode_icd10": "I25.9",
+    "alasan_rekomendasi": "Wajib diperjelas apakah Angina Pektoris Stabil atau Sindrom Koroner Akut (UAP, NSTEMI, STEMI)."
+  },
+  {
+    "singkatan": "ppok",
+    "istilah_resmi": "Penyakit Paru Obstruktif Kronis",
+    "kode_icd10": "J44.9",
+    "alasan_rekomendasi": "Hindari kerancuan koding dengan Asma Bronkial Eksaserbasi Akut (J45.9)."
+  },
+  {
+    "singkatan": "isk",
+    "istilah_resmi": "Infeksi Saluran Kemih",
+    "kode_icd10": "N39.0",
+    "alasan_rekomendasi": "Koder BPJS memerlukan bukti hasil laboratorium urinalisis (adanya leukosituria atau bakteriuria) untuk memvalidasi klaim."
+  },
+  {
+    "singkatan": "ckd",
+    "istilah_resmi": "Chronic Kidney Disease (Penyakit Ginjal Kronis)",
+    "kode_icd10": "N18.9",
+    "alasan_rekomendasi": "Wajib mencantumkan stadium ginjal (CKD Stage 1 - Stage 5) dan nilai laju filtrasi glomerulus (eGFR) / serum kreatinin."
+  },
+  {
+    "singkatan": "gerd",
+    "istilah_resmi": "Gastro-Esophageal Reflux Disease",
+    "kode_icd10": "K21.9",
+    "alasan_rekomendasi": "Sering tertukar dengan Dispepsia (K30). Catatan medis harus memuat keluhan khas rasa terbakar di dada (heartburn) atau regurgitasi asam."
+  },
+  {
+    "singkatan": "bph",
+    "istilah_resmi": "Benign Prostatic Hyperplasia",
+    "kode_icd10": "N40",
+    "alasan_rekomendasi": "Klaim tindakan urologi memerlukan data objektif pemeriksaan colok dubur (rectal toucher) atau hasil USG prostat."
+  },
+  {
+    "singkatan": "hnp",
+    "istilah_resmi": "Hernia Nukleus Pulposus",
+    "kode_icd10": "M51.2",
+    "alasan_rekomendasi": "Harus mencantumkan regio vertebra yang mengalami herniasi (misal: HNP Regio Lumbal L4-L5 atau L5-S1)."
+  },
+  {
+    "singkatan": "sle",
+    "istilah_resmi": "Systemic Lupus Erythematosus",
+    "kode_icd10": "M32.9",
+    "alasan_rekomendasi": "Penyakit kronis khusus. Verifikator asuransi meminta lampiran hasil pemeriksaan penunjang imunologi (ANA test / Anti-dsDNA)."
+  },
+  {
+    "singkatan": "fa",
+    "istilah_resmi": "Fibrilasi Atrium (Atrial Fibrillation)",
+    "kode_icd10": "I48.9",
+    "alasan_rekomendasi": "Singkatan 'fa' sering menimbulkan kerancuan interpretasi dengan Fraktur Antebrachii pada resume medis gawat darurat."
+  },
+  {
+    "singkatan": "cf",
+    "istilah_resmi": "Common Cold (Acute Nasopharyngitis)",
+    "kode_icd10": "J00",
+    "alasan_rekomendasi": "Singkatan 'cf' ambigu dengan Cystic Fibrosis (E84). Gunakan nama baku Common Cold atau Nasofaringitis Akut."
+  }
+]

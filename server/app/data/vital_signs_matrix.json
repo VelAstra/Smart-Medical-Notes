@@ -1,0 +1,202 @@
+[
+  {
+    "penyakit": "Demam Berdarah Dengue (DBD / DHF)",
+    "kode_icd10": "A91",
+    "variabel_objektif_wajib": [
+      {
+        "parameter": "Suhu Tubuh (Temperature)",
+        "kriteria": "Tercatat angka numerik dalam Celsius (°C), wajib terbukti demam tinggi (>= 38.0°C).",
+        "alasan_asuransi": "Klaim rawat inap DBD ditolak verifikator jika tidak ada rekam grafik suhu tubuh harian."
+      },
+      {
+        "parameter": "Tanda Hemodinamik (Tensi & Nadi)",
+        "kriteria": "Tekanan Darah (mmHg) dan Frekuensi Nadi (x/menit), kualitas nadi (kuat/lemah).",
+        "alasan_asuransi": "Menilai ada tidaknya perburukan ke arah Dengue Shock Syndrome (tekanan nadi menyempit <= 20 mmHg)."
+      },
+      {
+        "parameter": "Manifestasi Perdarahan",
+        "kriteria": "Hasil Uji Torniquet (Rumple Leede) atau temuan fisik petekia, purpura, epistaksis, perdarahan gusi.",
+        "alasan_asuransi": "Membedakan koding A90 (Dengue Fever biasa) dengan A91 (DHF derajat I-IV)."
+      },
+      {
+        "parameter": "Hasil Laboratorium Serial",
+        "kriteria": "Jumlah Trombosit (< 100.000 /uL) dan bukti Hemokonsentrasi (peningkatan Hematokrit >= 20%).",
+        "alasan_asuransi": "Syarat mutlak lolos verifikasi klaim BPJS Kesehatan untuk diagnosa DHF."
+      }
+    ],
+    "variabel_plan_wajib": [
+      {
+        "item": "Terapi Cairan Intravena (Infus)",
+        "kriteria": "Jenis kristaloid (Ringer Laktat atau NaCl 0.9%) disertai kecepatan tetesan cairan (misal: 15-20 tpm atau ml/kgBB/jam).",
+        "alasan_asuransi": "Protokol tatalaksana baku rehidrasi DBD untuk mencegah syok hipovolemik."
+      },
+      {
+        "item": "Pemberian Antipiretik Aman",
+        "kriteria": "Paracetamol oral atau infus dengan dosis tepat. Kontraindikasi NSAID (Ibuprofen/Aspirin) wajib dipatuhi.",
+        "alasan_asuransi": "Kepatuhan keamanan pasien (patient safety) untuk mencegah perdarahan saluran cerna."
+      },
+      {
+        "item": "Rencana Monitoring Serial",
+        "kriteria": "Jadwal evaluasi tanda vital per 4-6 jam dan cek darah lengkap ulang per 12-24 jam.",
+        "alasan_asuransi": "Bukti rekam medis bahwa pasien dalam observasi aktif di fasilitas rawat."
+      }
+    ]
+  },
+  {
+    "penyakit": "Infeksi Saluran Pernapasan Akut (ISPA)",
+    "kode_icd10": "J06.9",
+    "variabel_objektif_wajib": [
+      {
+        "parameter": "Laju Pernapasan (Respiratory Rate / RR)",
+        "kriteria": "Angka frekuensi napas per menit (misal: 18-24 x/menit pada dewasa, disesuaikan usia anak).",
+        "alasan_asuransi": "Wajib untuk mengevaluasi apakah ada takipnea atau tanda distres pernapasan yang mengarah ke Pneumonia (J18.9)."
+      },
+      {
+        "parameter": "Suhu Tubuh (Temperature)",
+        "kriteria": "Pengukuran suhu aksila terukur kuantitatif (°C).",
+        "alasan_asuransi": "Justifikasi pemberian antipiretik dan pemantauan infeksi sistemik."
+      },
+      {
+        "parameter": "Inspeksi Faring dan Tonsil",
+        "kriteria": "Deskripsi visual mukosa: hiperemis (+/-), ukuran tonsil (T1-T3), eksudat/detritus (+/-).",
+        "alasan_asuransi": "Menentukan apakah kasus merupakan infeksi virus swasirna (common cold) atau tonsilitis bakteri."
+      },
+      {
+        "parameter": "Auskultasi Paru",
+        "kriteria": "Suara napas dasar vesikuler, ada/tidaknya suara napas tambahan (ronki basah/kering, wheezing).",
+        "alasan_asuransi": "Mencegah klaim 'upcoding' (mengklaim bronkitis/pneumonia tanpa bukti stetoskop objektif)."
+      }
+    ],
+    "variabel_plan_wajib": [
+      {
+        "item": "Terapi Simtomatik",
+        "kriteria": "Antipiretik/analgetik (Paracetamol), mukolitik/ekspektoran (Ambroxol/GG), atau dekongestan dengan dosis jelas.",
+        "alasan_asuransi": "Kesesuaian obat dengan keluhan pasien pada lembar farmasi."
+      },
+      {
+        "item": "Restriksi Penggunaan Antibiotik",
+        "kriteria": "Antibiotik HANYA dituliskan jika ada bukti objektif infeksi bakteri (tonsilitis eksudativa, dahak purulen, leukositosis).",
+        "alasan_asuransi": "Audit rasionalitas peresepan obat oleh BPJS (klaim rentan dipotong jika antibiotik diresepkan tanpa indikasi)."
+      },
+      {
+        "item": "Edukasi Hidrasi dan Istirahat",
+        "kriteria": "Catatan anjuran konsumsi cairan hangat dan istirahat cukup.",
+        "alasan_asuransi": "Standar kelengkapan akreditasi rekam medis rawat jalan."
+      }
+    ]
+  },
+  {
+    "penyakit": "Hipertensi Esensial (Primer)",
+    "kode_icd10": "I10",
+    "variabel_objektif_wajib": [
+      {
+        "parameter": "Nilai Tekanan Darah Lengkap",
+        "kriteria": "Angka Sistolik dan Diastolik kuantitatif (mmHg), misal 150/90 mmHg. Tidak boleh hanya menulis 'tensi tinggi'.",
+        "alasan_asuransi": "Syarat validasi derajat hipertensi (Stage 1, Stage 2, atau Krisis Hipertensi)."
+      },
+      {
+        "parameter": "Frekuensi Nadi (Heart Rate)",
+        "kriteria": "Frekuensi per menit dan keteraturan irama (reguler/ireguler).",
+        "alasan_asuransi": "Penilaian risiko aritmia atau takikardia sekunder."
+      },
+      {
+        "parameter": "Pemeriksaan Fisik Organ Target",
+        "kriteria": "Evaluasi ekstremitas (edema pretibial +/-), suara jantung S1-S2, dan ronkhi paru basah basal.",
+        "alasan_asuransi": "Membedakan hipertensi murni dengan komplikasi gagal jantung (I11.0) atau penyakit ginjal (I12.0)."
+      }
+    ],
+    "variabel_plan_wajib": [
+      {
+        "item": "Regimen Antihipertensi Spesifik",
+        "kriteria": "Nama generik, dosis miligram, dan rute/jadwal pemberian (misal: Amlodipine 5-10 mg 1x1 tab pagi, atau Candesartan 8-16 mg 1x1).",
+        "alasan_asuransi": "Kesesuaian dengan Formularium Nasional (Fornas) BPJS Kesehatan."
+      },
+      {
+        "item": "Edukasi Gaya Hidup Non-Farmakologis",
+        "kriteria": "Catatan diet rendah garam (< 1 sendok teh per hari), olahraga aerobik teratur, dan kepatuhan minum obat.",
+        "alasan_asuransi": "Indikator program penanganan penyakit kronis (Prolanis)."
+      },
+      {
+        "item": "Jadwal Kontrol Berkala",
+        "kriteria": "Tanggal atau tenggat kontrol ulang tekanan darah (misal: kontrol 1 bulan untuk resep rutin).",
+        "alasan_asuransi": "Dasar penerbitan Surat Rujukan Balik (PRB) BPJS di fasilitas kesehatan primer."
+      }
+    ]
+  },
+  {
+    "penyakit": "Gastroenteritis Akut (Diare Akut)",
+    "kode_icd10": "A09",
+    "variabel_objektif_wajib": [
+      {
+        "parameter": "Derajat Dehidrasi Klinis",
+        "kriteria": "Wajib tertulis salah satu status: Tanpa Dehidrasi, Dehidrasi Ringan-Sedang, atau Dehidrasi Berat.",
+        "alasan_asuransi": "Verifikator asuransi mengunci verifikasi klaim rawat inap diare hanya jika terbukti dehidrasi sedang atau berat."
+      },
+      {
+        "parameter": "Tanda Dehidrasi Fisik",
+        "kriteria": "Kondisi turgor kulit dinding perut (kembali cepat/lambat), mata cekung (+/-), dan mukosa bibir/lidah (basah/kering).",
+        "alasan_asuransi": "Kesesuaian bukti fisik dengan klaim derajat keparahan penyakit."
+      },
+      {
+        "parameter": "Frekuensi Nadi dan Suhu",
+        "kriteria": "Nilai nadi (takikardia mengindikasikan hipovolemia) dan suhu tubuh (mendeteksi gastroenteritis infeksius).",
+        "alasan_asuransi": "Justifikasi pemberian cairan intravena dan pemantauan balans cairan."
+      }
+    ],
+    "variabel_plan_wajib": [
+      {
+        "item": "Terapi Rehidrasi Cairan",
+        "kriteria": "Rehidrasi oral dengan Oralit pada kasus ringan; atau Cairan Infus Kristaloid (Ringer Laktat/Asering) jika dehidrasi sedang-berat.",
+        "alasan_asuransi": "Tindakan medik mendasar yang menentukan validitas klaim tindakan keperawatan."
+      },
+      {
+        "item": "Suplementasi Tablet Zinc (Khusus Pediatrik)",
+        "kriteria": "Zinc 20 mg/hari (anak > 6 bulan) atau 10 mg/hari (anak < 6 bulan) selama 10 hari penuh.",
+        "alasan_asuransi": "Kepatuhan terhadap Pedoman Pelayanan Medis IDAI dan audit clinical pathway BPJS."
+      },
+      {
+        "item": "Larangan Antimotilitas pada Infeksi Akut",
+        "kriteria": "Menghindari peresepan Loperamid atau difenoksilat pada diare anak atau diare disentri.",
+        "alasan_asuransi": "Keamanan pasien untuk menghindari megakolon toksik atau ileus paralitik."
+      }
+    ]
+  },
+  {
+    "penyakit": "Diabetes Mellitus Tipe 2",
+    "kode_icd10": "E11.9",
+    "variabel_objektif_wajib": [
+      {
+        "parameter": "Nilai Kadar Glukosa Darah Kuantitatif",
+        "kriteria": "Hasil lab Gula Darah Sewaktu (GDS), Gula Darah Puasa (GDP), atau HbA1c dalam satuan mg/dL atau %.",
+        "alasan_asuransi": "Klaim terapi diabetes tanpa bukti lampiran angka glukosa lab akan ditolak oleh sistem verifikasi klaim elektronik."
+      },
+      {
+        "parameter": "Tekanan Darah dan Berat Badan (IMT)",
+        "kriteria": "Tensi dan berat badan untuk memantau sindrom metabolik dan fungsi kardiovaskular.",
+        "alasan_asuransi": "Parameter wajib penapisan komplikasi jangka panjang."
+      },
+      {
+        "parameter": "Pemeriksaan Ekstremitas Bawah (Kaki Diabetes)",
+        "kriteria": "Inspeksi kaki: ada/tidaknya luka ulkus diabetikum, kalus, deformitas, atau penurunan sensibilitas (neuropati).",
+        "alasan_asuransi": "Membedakan klaim E11.9 (tanpa komplikasi) dengan E11.5 (dengan komplikasi sirkulasi/ulkus gangren)."
+      }
+    ],
+    "variabel_plan_wajib": [
+      {
+        "item": "Terapi Obat Anti Diabetik (OAD) atau Insulin",
+        "kriteria": "Nama obat (misal: Metformin 500-850 mg 2-3x1 tab sesudah makan, Glimepiride 1-4 mg 1x1 pagi) atau dosis unit Insulin jelas.",
+        "alasan_asuransi": "Kesesuaian jadwal peresepan kronis 30 hari dalam program PRB."
+      },
+      {
+        "item": "Konseling Nutrisi Medis (3J)",
+        "kriteria": "Catatan edukasi jadwal makan, jenis makanan rendah indeks glikemik, dan jumlah kalori.",
+        "alasan_asuransi": "Indikator standar mutu penanganan diabetes rawat jalan."
+      },
+      {
+        "item": "Jadwal Evaluasi Laboratorium Berkala",
+        "kriteria": "Rencana pemeriksaan HbA1c setiap 3 bulan dan profil lipid serta fungsi ginjal tahunan.",
+        "alasan_asuransi": "Justifikasi rujukan laboratorium penunjang berkala."
+      }
+    ]
+  }
+]

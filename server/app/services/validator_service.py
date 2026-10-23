@@ -1,58 +1,52 @@
 """
 Service Mesin Aturan Validasi Rekam Medis (Coder's Perspective Rule Engine).
 Mendeteksi singkatan ambigu dan ketidaklengkapan data klinis untuk kelayakan klaim asuransi.
+Diselaraskan dengan Knowledge Base Ananda Auliya Rahma (Medical Domain Lead).
 """
 
+import os
 import re
+import json
 from typing import List
 from app.schemas.soap import SoapModel, SuggestionItem, SuggestionResponse
 
+# Lokasi berkas dataset pengetahuan medis
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(CURRENT_DIR, "..", "data")
+ABBR_FILE = os.path.join(DATA_DIR, "medical_abbreviations.json")
 
-# Kamus Singkatan Medis Baku (Dapat diperluas dari dataset Ananda Auliya)
-CLINICAL_ABBREVIATIONS = [
-    {
-        "code": "df",
-        "pattern": r"\bdf\b",
-        "expansion": "dengue fever",
-        "icd10": "A90",
-        "description": "Singkatan 'df' ambigu dan tidak memenuhi standar dokumentasi rekam medis ICD-10."
-    },
-    {
-        "code": "ispa",
-        "pattern": r"\bispa\b",
-        "expansion": "Infeksi Saluran Pernapasan Akut (ISPA)",
-        "icd10": "J06.9",
-        "description": "Disarankan mencantumkan nama diagnosis resmi untuk verifikasi klaim BPJS."
-    },
-    {
-        "code": "ht",
-        "pattern": r"\bht\b",
-        "expansion": "hipertensi",
-        "icd10": "I10",
-        "description": "Singkatan 'ht' berpotensi tertukar dengan istilah hematokrit/histerektomi."
-    },
-    {
-        "code": "dm",
-        "pattern": r"\bdm\b",
-        "expansion": "diabetes mellitus",
-        "icd10": "E11",
-        "description": "Singkatan 'dm' perlu diperjelas jenis tipenya (Tipe 1 / Tipe 2)."
-    },
-    {
-        "code": "tbc",
-        "pattern": r"\btbc?\b",
-        "expansion": "tuberculosis",
-        "icd10": "A15",
-        "description": "Istilah baku rekam medis internasional adalah tuberculosis."
-    },
-    {
-        "code": "gea",
-        "pattern": r"\bge(a)?\b",
-        "expansion": "gastroenteritis akut",
-        "icd10": "A09",
-        "description": "Gunakan istilah gastroenteritis akut untuk kepastian diagnosis koding klaim."
-    }
-]
+
+def load_clinical_abbreviations() -> List[dict]:
+    """Memuat kamus singkatan dari JSON jika tersedia, atau fallback ke dataset default."""
+    if os.path.exists(ABBR_FILE):
+        try:
+            with open(ABBR_FILE, "r", encoding="utf-8") as f:
+                raw_data = json.load(f)
+                result = []
+                for item in raw_data:
+                    code = item["singkatan"]
+                    result.append({
+                        "code": code,
+                        "pattern": rf"\b{re.escape(code)}\b",
+                        "expansion": item["istilah_resmi"],
+                        "icd10": item.get("kode_icd10", "Unspecified"),
+                        "description": item.get("alasan_rekomendasi", "Standarisasi rekam medis.")
+                    })
+                return result
+        except Exception:
+            pass
+
+    # Default fallback
+    return [
+        {"code": "df", "pattern": r"\bdf\b", "expansion": "dengue fever", "icd10": "A90", "description": "Singkatan ambigu."},
+        {"code": "ispa", "pattern": r"\bispa\b", "expansion": "Infeksi Saluran Pernapasan Akut (ISPA)", "icd10": "J06.9", "description": "Perjelas diagnosis spesifik."},
+        {"code": "ht", "pattern": r"\bht\b", "expansion": "hipertensi", "icd10": "I10", "description": "Tertukar dengan hematokrit."},
+        {"code": "dm", "pattern": r"\bdm\b", "expansion": "diabetes mellitus", "icd10": "E11", "description": "Tentukan tipe DM."},
+        {"code": "tbc", "pattern": r"\btbc?\b", "expansion": "tuberculosis", "icd10": "A15", "description": "Istilah resmi tuberculosis."}
+    ]
+
+
+CLINICAL_ABBREVIATIONS = load_clinical_abbreviations()
 
 
 class SoapValidatorService:
@@ -115,7 +109,7 @@ class SoapValidatorService:
                 )
             )
 
-        # 3. Aturan Validasi: Deteksi Singkatan Medis Ambigu
+        # 3. Aturan Validasi: Deteksi Singkatan Medis Ambigu (Berdasarkan Knowledge Base)
         for item in CLINICAL_ABBREVIATIONS:
             if re.search(item["pattern"], a_text, re.IGNORECASE):
                 suggestions.append(
