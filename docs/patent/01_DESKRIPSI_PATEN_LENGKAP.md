@@ -91,7 +91,8 @@ Merujuk pada GAMBAR 4, alur kerja disambiguasi singkatan medis kontekstual berla
 - Apabila ditemukan singkatan ambigu (misalnya "df"), pada Langkah 406 sistem melakukan analisis konteks simtom pendukung dari blok Subjective dan Objective. Sistem memeriksa apakah terdapat simtom demam, bintik merah, ruam kulit, petekia, atau trombositopenia.
 - Pada Langkah 408, sistem mengonfirmasi bahwa konteks klinis mendukung diagnosis *Dengue Fever*, menetapkan istilah resmi "Dengue Fever", dan mengaitkannya dengan kode klasifikasi ICD-10 A97 / A90.
 - Pada Langkah 410, sistem menyusun muatan rekomendasi (*replacement payload*) dengan tipe aksi 'replace', target kata 'df', dan kata pengganti resmi "Dengue Fever".
-- Pada Langkah 412, rekomendasi disajikan pada antarmuka pengguna sebagai butir saran yang dapat diterima langsung dengan satu kali klik.
+- Pada Langkah 414, rekomendasi disajikan pada antarmuka pengguna sebagai butir saran yang dapat diterima langsung dengan satu kali klik pada Panel Rekomendasi [504].
+- Pada Langkah 412, sistem mengabaikan atau melewati token kata yang bukan merupakan singkatan ambigu sehingga tidak ada saran perbaikan yang dibangkitkan.
 
 Merujuk pada GAMBAR 5, antarmuka pengguna dua panel mencakup:
 - Area 502: Panel Kiri (SOAP Note Editor) yang memuat empat area masukan teks terpisah untuk blok Subjective, Objective, Assessment, dan Plan, disertai label jumlah karakter dan penanda visual interaktif.
