@@ -1,0 +1,21 @@
+Berikut adalah rangkuman mengenai konsep, arsitektur, dan rencana pengembangan **Smart Medical Note** berdasarkan rekaman diskusi:
+
+### 1. Konsep dan Tujuan Utama
+* **Sistem Rekomendasi Medis (Serupa *Grammarly*)**: Smart Medical Note dirancang sebagai antarmuka dan arsitektur sistem yang memberikan saran (*suggestion*) serta rekomendasi secara *real-time* saat dokter mengetik rekam medis.
+* **Penerjemah Singkatan & Pengoreksi Kelengkapan**: Sistem bertugas mendeteksi singkatan medis yang kurang jelas (misalnya menerjemahkan istilah seperti "DF") dan memberi peringatan jika ada variabel klinis yang kurang lengkap.
+* **Format Terstruktur (SOAP)**: Membantu merapikan dan mengonversi catatan medis dokter ke dalam struktur standar SOAP (*Subjective, Objective, Assessment, Plan*).
+
+### 2. Urgensi Kebutuhan Sistem
+* **Kebutuhan *Coder* & Klaim Asuransi**: Rekomendasi ini dibutuhkan oleh *coder* (petugas rekam medis) yang menentukan apakah dokumen rekam medis layak dijadikan lampiran untuk klaim asuransi.
+* **Menghindari Konflik Informasi**: Catatan yang tidak terstruktur, penuh singkatan tidak standar, atau kehilangan data spesifik (seperti angka suhu tubuh pada kondisi demam) membuat petugas *coder* bingung memverifikasi dokumen.
+
+### 3. Visi Arsitektur dan Alur Kerja (*Workflow*)
+* **Layanan API Terpusat**: Dalam jangka panjang, Smart Medical Note digambarkan seperti layanan API (serupa *Google Maps API*) yang dapat diakses oleh berbagai fasilitas kesehatan atau perekam medis dari mana saja.
+* **Ekstraksi Paragraf Otomatis**: Salah satu ide alur kerja yang diusulkan adalah dokter cukup mengetik satu paragraf deskripsi diagnosis secara bebas, lalu model sistem akan mengekstraknya ke format terstruktur SOAP sekaligus memberikan saran perbaikan.
+
+### 4. Batasan & Target Output Proyek (MVP)
+* **Fokus pada Arsitektur & Prototipe Berjalan**: Target utama proyek ini (dalam jangka waktu 7 minggu) adalah menghasilkan *Minimum Viable Product* (MVP) atau prototipe antarmuka dan *backend* yang dapat berfungsi.
+* **Tidak Memprioritaskan Akurasi ML Tinggi**: Mahasiswa/tim tidak dituntut melatih model dengan akurasi tinggi (akurasi awal 30%–40% atau sekadar *proof of concept* menggunakan data *dummy* sudah mencukupi).
+* **Opsi Model**: Penggunaan model *machine learning / deep learning* sederhana maupun integrasi API eksternal (seperti OpenAI/ChatGPT) diperbolehkan selama disertai argumentasi logis terkait biaya dan efisiensi.
+
+ Apakah Anda ingin saya buatkan draf ringkasan arsitektur teknis atau outline dokumen laporan MVP berdasarkan rencana pengembangan ini?

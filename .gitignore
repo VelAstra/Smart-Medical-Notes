@@ -5,8 +5,8 @@ node_modules/
 .idea/
 __pycache__/
 *.pyc
-
-# Catatan internal & dokumentasi lokal asistensi
-Dokumentasi.jpeg
-Notul.txt
-Konsul.txt
+*.pyo
+*.pyd
+.venv/
+env/
+venv/

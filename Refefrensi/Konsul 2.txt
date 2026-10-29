@@ -1,0 +1,48 @@
+Berikut adalah transkrip dari rekaman audio **"10-28-2026_16.54.mp3"** mengenai diskusi penyusunan draf paten perangkat lunak medis (*Smart Medical Notes*):
+
+---
+
+### **Transkrip Lengkap Rekaman Audio**
+
+#### **1. Pembahasan Awal Smart Medical Notes & Status Paten**
+* **Dosen/Pembimbing:** Kelompok *Smart Medical Notes* terbilang unik karena hanya dihadiri oleh tiga orang.
+* **Dosen/Pembimbing:** Saat ini sedang dilakukan pengajuan paten untuk *Smart Medical Notes* berdasarkan *paper* dan lembar kerja (*spreadsheet*) yang telah dibagikan, dengan status kemajuan mencapai 25%.
+* **Dosen/Pembimbing:** Pendaftaran paten tidak hanya sebatas tampilan antarmuka (UI), tetapi juga memerlukan penjelasan metode pendukung, simulasi, *mockup* yang jelas, serta arsitektur sistem.
+* **Mahasiswa:** Menanyakan apakah sumber data inputan berasal dari berbagai media seperti suara, ketikan teks, atau hasil alat lain.
+* **Dosen/Pembimbing:** Mengonfirmasi bahwa input saat ini difokuskan pada ketikan teks biasa (*free text*).
+* **Dosen/Pembimbing:** Rencana paten mencakup antarmuka *free text* dengan *plugin* saran (*suggestion plugin*). Tujuan utamanya adalah agar sistem ini dapat diintegrasikan ke Rekam Medis Elektronik (RME) manapun.
+
+---
+
+#### **2. Konsep Sistem Rekam Medis & Model Integrasi**
+* **Dosen/Pembimbing:** Berbeda dengan rekam medis yang menggunakan *textbox*, *checkbox*, atau *radio button*, sistem ini menyediakan *recommended system* untuk melengkapi data rekam medis sesuai standar koder.
+* **Dosen/Pembimbing:** Konsepnya mirip seperti penyediaan layanan *Software-as-a-Service* (SaaS) atau API (seperti Google Maps untuk navigasi), yang dapat digunakan oleh berbagai aplikasi rekam medis di Indonesia guna meningkatkan kualitas data.
+* **Dosen/Pembimbing:** Status pengajuan berkas saat ini sudah berada di tahap tinjauan (*review*) di kantor paten UGM.
+* **Dosen/Pembimbing:** Dokumen utama yang sangat dibutuhkan adalah dokumen deskripsi paten dan template gambar/diagram paten.
+
+---
+
+#### **3. Penyusunan Dokumen Paten & Riset Google Patents**
+* **Dosen/Pembimbing:** Pihak penilai paten di UGM memerlukan kejelasan mengenai cara kerja *backend* dan sistem pendukungnya, bukan hanya tampilan UI.
+* **Dosen/Pembimbing:** Mahasiswa disarankan mempelajari dokumen paten sejenis di Google Patents (misalnya sistem *auto-complete* atau paten dari Korea) untuk memahami cara penyusunan penjelasan sistem dan diagram alurnya (*flowchart*).
+* **Dosen/Pembimbing:** Langkah awal kelompok adalah memahami struktur dokumen paten, lalu menerjemahkan tampilan antarmuka riset yang ada menjadi bentuk draf paten yang komprehensif.
+* **Dosen/Pembimbing:** Diperlihatkan pula contoh paten internasional mengenai ekstraksi otomatis anotasi percakapan dokter-pasien (format SOAP) menggunakan AI.
+* **Dosen/Pembimbing:** Pengajuan di DJKI Indonesia tidak sekaku standar Amerika Serikat, sehingga kelompok diminta berfokus menyusun draf paten dari hasil riset yang ada.
+
+---
+
+#### **4. Diskusi Domain Rekayasa Perangkat Lunak (RPL)**
+* **Mahasiswa:** Menanyakan apakah fokus kegiatan ini hanya pada draf paten dan merasa tugas ini berada di luar domain RPL yang biasanya membuat software/aplikasi.
+* **Dosen/Pembimbing:** Menjelaskan bahwa pematenan metode, UI/UX, maupun *framework* baru merupakan bagian resmi dari domain RPL.
+* **Dosen/Pembimbing:** Memberikan perumpamaan: jika penemu metode *Waterfall* atau *framework* Laravel mematenkan temuannya di awal, maka penggunaannya harus membayar lisensi. Oleh karena itu, *drafting patent* metode perangkat lunak adalah bagian dari *software engineering* .
+
+---
+
+#### **5. Rencana Proposal Minggu Depan & Penutup**
+* **Dosen/Pembimbing:** Apabila kelompok ingin menambah pembuatan prototipe aplikasi selain draf paten, hal tersebut diperbolehkan.
+* **Mahasiswa & Dosen:** Disepakati bahwa untuk presentasi proposal minggu depan, fokus utama diletakkan pada penyusunan dokumen paten (*drafting patent*) dan arsitektur sistemnya.
+* **Dosen/Pembimbing:** Tugas menyusun draf paten yang layak *submit* sudah cukup menantang. Diskusi diakhiri dan komunikasi lanjutan dapat dilakukan melalui WhatsApp.
+
+---
+
+ *Apakah Anda ingin saya buatkan draf awal struktur dokumen paten (meliputi deskripsi dan arsitektur sistem) berdasarkan hasil diskusi dalam rekaman ini?*
